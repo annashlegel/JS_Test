@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>11 Test</title>
+</head>
+<body>
+	<div>
+		<h1>Head 1</h1>
+		<p id="p1">Paragraph 1</p>
+		<a href="google.com.ua">Google</a>
+	</div>
+	<div>
+	<h2>Head 2</h2>
+	<p id="p2">Paragraph 2</p>
+	<a href="https://www.yandex.ru/">Yandex</a>
+</div>
+	<h3>Head 3</h3>
+	<p id="p3">Paragraph 3</p>
+	<a href="https://www.yahoo.com/">Yahoo</a>
+</body>
+<div>
+	<h4>Head 4</h4>
+	<p id="p4">Paragraph 4</p>
+	<a href="https://mail.ru/">Mail</a><br>
+</div>
+
+<form>
+<input type="button" value="Start count!" onClick="timedCount()">
+<input type="text" id="txt">
+<input type="button" value="Stop count!" onClick="stopCount()">
+</form>
+<p>Click on the "Start count!" button above to start the timer. The input field will count for ever, starting at 0.
+Click on the "Stop count!" button to stop the counting.</p>
+
+<script>
+var c=0
+var t
+function timedCount()
+{
+document.getElementById('txt').value=c
+c=c+1
+t=setTimeout("timedCount()",1000)
+}
+
+function stopCount()
+{
+clearTimeout(t)
+}
+
+</script>
+</body>
+</html>
